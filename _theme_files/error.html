@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Workopia</title>
+    </head>
+    <body class="bg-gray-100">
+        <!-- Header -->
+        <header class="bg-blue-900 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-3xl font-semibold">
+                    <a href="index.html">Workopia</a>
+                </h1>
+                <nav class="hidden md:flex items-center space-x-4">
+                    <a href="jobs.html" class="text-white hover:underline py-2"
+                        >All Jobs</a
+                    >
+                    <a
+                        href="saved-jobs.html"
+                        class="text-white hover:underline py-2"
+                        >Saved Jobs</a
+                    >
+                    <a href="login.html" class="text-white hover:underline py-2"
+                        >Login</a
+                    >
+                    <a
+                        href="register.html"
+                        class="text-white hover:underline py-2"
+                        >Register</a
+                    >
+                    <a
+                        href="dashboard.html"
+                        class="text-white hover:underline py-2"
+                    >
+                        <i class="fa fa-gauge mr-1"></i> Dashboard
+                    </a>
+                    <a
+                        href="create-job.html"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded hover:shadow-md transition duration-300"
+                    >
+                        <i class="fa fa-edit"></i> Create Job
+                    </a>
+                </nav>
+                <button
+                    id="hamburger"
+                    class="text-white md:hidden flex items-center"
+                >
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <nav
+                id="mobile-menu"
+                class="hidden md:hidden bg-blue-900 text-white mt-5 pb-4 space-y-2"
+            >
+                <a href="jobs.html" class="block px-4 py-2 hover:bg-blue-700"
+                    >All Jobs</a
+                >
+                <a
+                    href="saved-jobs.html"
+                    class="block px-4 py-2 hover:bg-blue-700"
+                    >Saved Jobs</a
+                >
+                <a href="login.html" class="block px-4 py-2 hover:bg-blue-700"
+                    >Login</a
+                >
+                <a
+                    href="register.html"
+                    class="block px-4 py-2 hover:bg-blue-700"
+                    >Register</a
+                >
+                <a
+                    href="dashboard.html"
+                    class="block text-white hover:underline py-2"
+                >
+                    <i class="fa fa-gauge mr-1"></i> Dashboard
+                </a>
+                <a
+                    href="create-job.html"
+                    class="block px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black"
+                >
+                    <i class="fa fa-edit"></i> Create Job
+                </a>
+            </nav>
+        </header>
+
+        <!-- Top Banner -->
+        <section class="bg-blue-900 text-white py-6 text-center">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-semibold">
+                    Unlock Your Career Potential
+                </h2>
+                <p class="text-lg mt-2">
+                    Discover the perfect job opportunity for you.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container mx-auto p-4 mt-4">
+                <div
+                    class="text-center text-3xl mb-4 font-bold border border-gray-300 p-3"
+                >
+                    404 Error
+                </div>
+                <p class="text-center text-2xl mb-4">
+                    This page does not exist
+                </p>
+            </div>
+        </section>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

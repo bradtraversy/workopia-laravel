@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Workopia</title>
+    </head>
+    <body class="bg-gray-100">
+        <!-- Header -->
+        <header class="bg-blue-900 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-3xl font-semibold">
+                    <a href="index.html">Workopia</a>
+                </h1>
+                <nav class="hidden md:flex items-center space-x-4">
+                    <a
+                        href="jobs.html"
+                        class="text-yellow-500 font-bold hover:underline py-2"
+                        >All Jobs</a
+                    >
+                    <a
+                        href="saved-jobs.html"
+                        class="text-white hover:underline py-2"
+                        >Saved Jobs</a
+                    >
+                    <a href="login.html" class="text-white hover:underline py-2"
+                        >Login</a
+                    >
+                    <a
+                        href="register.html"
+                        class="text-white hover:underline py-2"
+                        >Register</a
+                    >
+                    <a
+                        href="dashboard.html"
+                        class="text-white hover:underline py-2"
+                    >
+                        <i class="fa fa-gauge mr-1"></i> Dashboard
+                    </a>
+                    <a
+                        href="create-job.html"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded hover:shadow-md transition duration-300"
+                    >
+                        <i class="fa fa-edit"></i> Create Job
+                    </a>
+                </nav>
+                <button
+                    id="hamburger"
+                    class="text-white md:hidden flex items-center"
+                >
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <nav
+                id="mobile-menu"
+                class="hidden md:hidden bg-blue-900 text-white mt-5 pb-4 space-y-2"
+            >
+                <a
+                    href="jobs.html"
+                    class="block text-yellow-500 font-bold px-4 py-2 hover:bg-blue-700"
+                    >All Jobs</a
+                >
+                <a
+                    href="saved-jobs.html"
+                    class="block px-4 py-2 hover:bg-blue-700"
+                    >Saved Jobs</a
+                >
+                <a href="login.html" class="block px-4 py-2 hover:bg-blue-700"
+                    >Login</a
+                >
+                <a
+                    href="register.html"
+                    class="block px-4 py-2 hover:bg-blue-700"
+                    >Register</a
+                >
+                <a
+                    href="dashboard.html"
+                    class="block text-white hover:underline py-2"
+                >
+                    <i class="fa fa-gauge mr-1"></i> Dashboard
+                </a>
+                <a
+                    href="create-job.html"
+                    class="block px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black"
+                >
+                    <i class="fa fa-edit"></i> Create Job
+                </a>
+            </nav>
+        </header>
+
+        <!-- Top Search -->
+        <section class="bg-blue-800 py-8 text-center">
+            <div class="container mx-auto">
+                <form class="block mx-5 md:mx-auto">
+                    <input
+                        type="text"
+                        name="keywords"
+                        placeholder="Keywords"
+                        class="w-full md:w-auto mb-2 px-4 py-2 focus:outline-none"
+                    />
+                    <input
+                        type="text"
+                        name="location"
+                        placeholder="Location"
+                        class="w-full md:w-auto mb-2 px-4 py-2 focus:outline-none"
+                    />
+                    <button
+                        class="w-full md:w-auto bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 focus:outline-none"
+                    >
+                        <i class="fa fa-search"></i> Search
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Job Listings -->
+        <main class="container mx-auto p-4 mt-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <!-- Job Listing 1 -->
+                <div class="rounded-lg shadow-md bg-white p-4">
+                    <div class="flex items-center space-between gap-4">
+                        <img
+                            src="/images/logos/logo-algorix.png"
+                            alt=""
+                            class="w-14"
+                        />
+                        <div>
+                            <h2 class="text-xl font-semibold">
+                                Software Engineer
+                            </h2>
+                            <p class="text-sm text-gray-500">Full-Time</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg mt-2">
+                        Design and develop high-quality software applications,
+                        collaborating with teams and ensuring efficient
+                        solutions.
+                    </p>
+                    <ul class="my-4 bg-gray-100 p-4 rounded">
+                        <li class="mb-2"><strong>Salary:</strong> $90,000</li>
+                        <li class="mb-2">
+                            <strong>Location:</strong> Albany, NY
+                            <span
+                                class="text-xs bg-red-500 text-white rounded-full px-2 py-1 ml-2"
+                                >On-site</span
+                            >
+                        </li>
+                        <li class="mb-2">
+                            <strong>Tags:</strong> <span>Development</span>,
+                            <span>Coding</span>, <span>Java</span>,
+                            <span>Python</span>
+                        </li>
+                    </ul>
+                    <a
+                        href="job-details.html"
+                        class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                    >
+                        Details
+                    </a>
+                </div>
+
+                <!-- Job Listing 2 -->
+                <div class="rounded-lg shadow-md bg-white p-4">
+                    <div class="flex items-center space-between gap-4">
+                        <img
+                            src="/images/logos/logo-bitwave.png"
+                            alt=""
+                            class="w-14"
+                        />
+                        <div>
+                            <h2 class="text-xl font-semibold">
+                                Marketing Specialist
+                            </h2>
+                            <p class="text-sm text-gray-500">Full-Time</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg mt-2">
+                        Develop and execute marketing campaigns, conduct market
+                        research, and drive brand engagement.
+                    </p>
+                    <ul class="my-4 bg-gray-100 p-4 rounded">
+                        <li class="mb-2"><strong>Salary:</strong> $70,000</li>
+                        <li class="mb-2">
+                            <strong>Location:</strong> San Francisco, CA
+                            <span
+                                class="text-xs bg-green-500 text-white rounded-full px-2 py-1 ml-2"
+                                >Remote</span
+                            >
+                        </li>
+                        <li class="mb-2">
+                            <strong>Tags:</strong> <span>Marketing</span>,
+                            <span>Advertising</span>
+                        </li>
+                    </ul>
+                    <a
+                        href="job-details.html"
+                        class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                    >
+                        Details
+                    </a>
+                </div>
+
+                <!-- Job Listing 3 -->
+                <div class="rounded-lg shadow-md bg-white p-4">
+                    <div class="flex items-center space-between gap-4">
+                        <img
+                            src="/images/logos/logo-nextgen.png"
+                            alt=""
+                            class="w-14"
+                        />
+                        <div>
+                            <h2 class="text-xl font-semibold">Web Developer</h2>
+                            <p class="text-sm text-gray-500">Contract</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg mt-2">
+                        Build and maintain web applications, handling full
+                        development lifecycle from design to deployment.
+                    </p>
+                    <ul class="my-4 bg-gray-100 p-4 rounded">
+                        <li class="mb-2"><strong>Salary:</strong> $85,000</li>
+                        <li class="mb-2">
+                            <strong>Location:</strong> Chicago, IL
+                            <span
+                                class="text-xs bg-red-500 text-white rounded-full px-2 py-1 ml-2"
+                                >On-site</span
+                            >
+                        </li>
+                        <li class="mb-2">
+                            <strong>Tags:</strong>
+                            <span>Web Development</span>,
+                            <span>Programming</span>
+                        </li>
+                    </ul>
+                    <a
+                        href="job-details.html"
+                        class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                    >
+                        Details
+                    </a>
+                </div>
+
+                <!-- Job Listing 4 -->
+                <div class="rounded-lg shadow-md bg-white p-4">
+                    <div class="flex items-center space-between gap-4">
+                        <img
+                            src="/images/logos/logo-quantumcode.png"
+                            alt=""
+                            class="w-14"
+                        />
+                        <div>
+                            <h2 class="text-xl font-semibold">Data Analyst</h2>
+                            <p class="text-sm text-gray-500">Full-Time</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg mt-2">
+                        Analyze complex data to derive insights and support
+                        data-driven decision-making processes.
+                    </p>
+                    <ul class="my-4 bg-gray-100 p-4 rounded">
+                        <li class="mb-2"><strong>Salary:</strong> $75,000</li>
+                        <li class="mb-2">
+                            <strong>Location:</strong> Chicago, IL
+                            <span
+                                class="text-xs bg-red-500 text-white rounded-full px-2 py-1 ml-2"
+                                >On-site</span
+                            >
+                        </li>
+                        <li class="mb-2">
+                            <strong>Tags:</strong>
+                            <span>Data Analysis</span>,
+                            <span>Statistics</span>
+                        </li>
+                    </ul>
+                    <a
+                        href="job-details.html"
+                        class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                    >
+                        Details
+                    </a>
+                </div>
+
+                <!-- Job Listing 5 -->
+                <div class="rounded-lg shadow-md bg-white p-4">
+                    <div class="flex items-center space-between gap-4">
+                        <img
+                            src="/images/logos/logo-shield.png"
+                            alt=""
+                            class="w-14"
+                        />
+                        <div>
+                            <h2 class="text-xl font-semibold">
+                                Graphic Designer
+                            </h2>
+                            <p class="text-sm text-gray-500">Full-Time</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg mt-2">
+                        Create compelling designs across various media, from
+                        branding to digital, while collaborating with the
+                        creative team.
+                    </p>
+                    <ul class="my-4 bg-gray-100 p-4 rounded">
+                        <li class="mb-2"><strong>Salary:</strong> $70,000</li>
+                        <li class="mb-2">
+                            <strong>Location:</strong> Albany, NY
+                            <span
+                                class="text-xs bg-red-500 text-white rounded-full px-2 py-1 ml-2"
+                                >On-site</span
+                            >
+                        </li>
+                        <li class="mb-2">
+                            <strong>Tags:</strong>
+                            <span>Graphic Design</span>,
+                            <span>Creative</span>
+                        </li>
+                    </ul>
+                    <a
+                        href="job-details.html"
+                        class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                    >
+                        Details
+                    </a>
+                </div>
+
+                <!-- Job Listing 6 -->
+                <div class="rounded-lg shadow-md bg-white p-4">
+                    <div class="flex items-center space-between gap-4">
+                        <img
+                            src="/images/logos/logo-sparkle.png"
+                            alt=""
+                            class="w-14"
+                        />
+                        <div>
+                            <h2 class="text-xl font-semibold">
+                                Data Scientist
+                            </h2>
+                            <p class="text-sm text-gray-500">Full-Time</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg mt-2">
+                        Analyze and interpret complex data, build predictive
+                        models, and solve real-world problems with machine
+                        learning.
+                    </p>
+                    <ul class="my-4 bg-gray-100 p-4 rounded">
+                        <li class="mb-2"><strong>Salary:</strong> $100,000</li>
+                        <li class="mb-2">
+                            <strong>Location:</strong> Boston, MA
+                            <span
+                                class="text-xs bg-green-500 text-white rounded-full px-2 py-1 ml-2"
+                                >Remote</span
+                            >
+                        </li>
+                        <li class="mb-2">
+                            <strong>Tags:</strong>
+                            <span>Data Science</span>,
+                            <span>Machine Learning</span>
+                        </li>
+                    </ul>
+                    <a
+                        href="job-details.html"
+                        class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                    >
+                        Details
+                    </a>
+                </div>
+
+                <!-- Job Listing 7 -->
+                <div class="rounded-lg shadow-md bg-white p-4">
+                    <div class="flex items-center space-between gap-4">
+                        <img
+                            src="/images/logos/logo-vencom.png"
+                            alt=""
+                            class="w-14"
+                        />
+                        <div>
+                            <h2 class="text-xl font-semibold">UX Designer</h2>
+                            <p class="text-sm text-gray-500">Part-Time</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg mt-2">
+                        Enhance user experience through design, user research,
+                        and collaboration with developers and product managers.
+                    </p>
+                    <ul class="my-4 bg-gray-100 p-4 rounded">
+                        <li class="mb-2"><strong>Salary:</strong> $80,000</li>
+                        <li class="mb-2">
+                            <strong>Location:</strong> San Jose, CA
+                            <span
+                                class="text-xs bg-green-500 text-white rounded-full px-2 py-1 ml-2"
+                                >Remote</span
+                            >
+                        </li>
+                        <li class="mb-2">
+                            <strong>Tags:</strong> <span>UX Design</span>,
+                            <span>User Research</span>
+                        </li>
+                    </ul>
+                    <a
+                        href="job-details.html"
+                        class="block w-full text-center px-5 py-2.5 shadow-sm rounded border text-base font-medium text-indigo-700 bg-indigo-100 hover:bg-indigo-200"
+                    >
+                        Details
+                    </a>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="flex justify-center mt-6">
+                <span class="px-4 py-2 bg-gray-300 text-gray-500 rounded-l-lg"
+                    >Previous</span
+                >
+                <a
+                    href="#"
+                    class="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600"
+                    >1</a
+                >
+                <a
+                    href="#"
+                    class="px-4 py-2 bg-gray-300 text-gray-500 hover:bg-blue-600 hover:text-white"
+                    >2</a
+                >
+                <a
+                    href="#"
+                    class="px-4 py-2 bg-gray-300 text-gray-500 hover:bg-blue-600 hover:text-white"
+                    >3</a
+                >
+                <a
+                    href="#"
+                    class="px-4 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600"
+                    >Next</a
+                >
+            </div>
+        </main>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

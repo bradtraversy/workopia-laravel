@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Workopia</title>
+    </head>
+    <body class="bg-gray-100">
+        <!-- Header -->
+        <header class="bg-blue-900 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-3xl font-semibold">
+                    <a href="index.html">Workopia</a>
+                </h1>
+                <nav class="hidden md:flex items-center space-x-4">
+                    <a href="jobs.html" class="text-white hover:underline py-2"
+                        >All Jobs</a
+                    >
+                    <a
+                        href="saved-jobs.html"
+                        class="text-white hover:underline py-2"
+                        >Saved Jobs</a
+                    >
+                    <a href="login.html" class="text-white hover:underline py-2"
+                        >Login</a
+                    >
+                    <a
+                        href="register.html"
+                        class="text-white hover:underline py-2"
+                        >Register</a
+                    >
+                    <a
+                        href="dashboard.html"
+                        class="hover:underline py-2 font-bold text-yellow-500"
+                    >
+                        <i class="fa fa-gauge mr-1"></i> Dashboard
+                    </a>
+                    <a
+                        href="create-job.html"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded hover:shadow-md transition duration-300"
+                    >
+                        <i class="fa fa-edit"></i> Create Job
+                    </a>
+                </nav>
+                <button
+                    id="hamburger"
+                    class="text-white md:hidden flex items-center"
+                >
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div
+                id="mobile-menu"
+                class="hidden md:hidden bg-blue-900 text-white mt-5 pb-4 space-y-2"
+            >
+                <a href="jobs.html" class="block px-4 py-2 hover:bg-blue-700"
+                    >All Jobs</a
+                >
+                <a
+                    href="saved-jobs.html"
+                    class="block px-4 py-2 hover:bg-blue-700"
+                    >Saved Jobs</a
+                >
+                <a
+                    href="dashboard.html"
+                    class="block px-4 py-2 hover:bg-blue-700"
+                    >Dashboard</a
+                >
+                <a href="login.html" class="block px-4 py-2 hover:bg-blue-700"
+                    >Login</a
+                >
+                <a
+                    href="register.html"
+                    class="block px-4 py-2 hover:bg-blue-700"
+                    >Register</a
+                >
+                <a
+                    href="dashboard.html"
+                    class="block hover:underline py-2 font-bold text-yellow-500"
+                >
+                    <i class="fa fa-gauge mr-1"></i> Dashboard
+                </a>
+                <a
+                    href="create-job.html"
+                    class="block px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-black"
+                >
+                    <i class="fa fa-edit"></i> Create Job
+                </a>
+            </div>
+        </header>
+
+        <main class="container mx-auto p-4 mt-4">
+            <section class="flex flex-col md:flex-row gap-6">
+                <!-- Profile Info -->
+                <div class="bg-white p-8 rounded-lg shadow-md w-full md:w-1/2">
+                    <h3 class="text-3xl text-center font-bold mb-4">
+                        Profile Info
+                    </h3>
+                    <form
+                        method="POST"
+                        action="/jobs"
+                        enctype="multipart/form-data"
+                    >
+                        <div class="mb-4">
+                            <label class="block text-gray-700" for="name"
+                                >Name</label
+                            >
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                value="John Doe"
+                                class="w-full px-4 py-2 border rounded focus:outline-none"
+                            />
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700" for="email"
+                                >Email</label
+                            >
+                            <input
+                                id="email"
+                                type="text"
+                                name="email"
+                                value="john@gmail.com"
+                                class="w-full px-4 py-2 border rounded focus:outline-none"
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 my-3 rounded focus:outline-none"
+                        >
+                            Save
+                        </button>
+                    </form>
+                </div>
+
+                <!-- My Job Listings -->
+                <div class="bg-white p-8 rounded-lg shadow-md w-full">
+                    <h3 class="text-3xl text-center font-bold mb-4">
+                        My Job Listings
+                    </h3>
+                    <!-- Listing 1 -->
+                    <div
+                        class="flex justify-between items-center border-b-2 border-gray-200 py-2"
+                    >
+                        <div>
+                            <h3 class="text-xl font-semibold">
+                                Software Engineer
+                            </h3>
+                            <p class="text-gray-700">Full Time</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <a
+                                href="edit-job.html"
+                                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm"
+                                >Edit</a
+                            >
+                            <form method="POST">
+                                <button
+                                    type="submit"
+                                    class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm"
+                                >
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Listing 2 -->
+                    <div
+                        class="flex justify-between items-center border-b-2 border-gray-200 py-2"
+                    >
+                        <div>
+                            <h3 class="text-xl font-semibold">Data Analyst</h3>
+                            <p class="text-gray-700">Full Time</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <a
+                                href="edit-job.html"
+                                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm"
+                                >Edit</a
+                            >
+                            <form method="POST">
+                                <button
+                                    type="submit"
+                                    class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm"
+                                >
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Listing 3 -->
+                    <div
+                        class="flex justify-between items-center border-b-2 border-gray-200 py-2"
+                    >
+                        <div>
+                            <h3 class="text-xl font-semibold">
+                                Graphic Designer
+                            </h3>
+                            <p class="text-gray-700">Full Time</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <a
+                                href="edit-job.html"
+                                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm"
+                                >Edit</a
+                            >
+                            <form method="POST">
+                                <button
+                                    type="submit"
+                                    class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm"
+                                >
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Banner -->
+        <section class="container mx-auto my-6">
+            <div
+                class="bg-blue-800 text-white rounded p-4 flex items-center justify-between flex-col md:flex-row gap-4"
+            >
+                <div>
+                    <h2 class="text-xl font-semibold">Looking to hire?</h2>
+                    <p class="text-gray-200 text-lg mt-2">
+                        Post your job listing now and find the perfect
+                        candidate.
+                    </p>
+                </div>
+                <a
+                    href="create-job.html"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded hover:shadow-md transition duration-300"
+                >
+                    <i class="fa fa-edit"></i> Create Job
+                </a>
+            </div>
+        </section>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
