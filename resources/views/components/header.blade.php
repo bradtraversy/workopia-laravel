@@ -10,10 +10,8 @@
             <x-nav-link url="/login" :active="request()->is('login')">Login</x-nav-link>
             <x-nav-link url="/register" :active="request()->is('register')">Register</x-nav-link>
             <x-nav-link url="/dashboard" :active="request()->is('dashboard')" icon="gauge">Dashboard</x-nav-link>
-            <a href="{{url('/jobs/create')}}"
-                class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded hover:shadow-md transition duration-300">
-                <i class="fa fa-edit"></i> Create Job
-            </a>
+            <x-button-link url='/jobs/create' icon='edit'>Create Job
+            </x-button-link>
         </nav>
         <button id="hamburger" class="text-white md:hidden flex items-center">
             <i class="fa fa-bars text-2xl"></i>
