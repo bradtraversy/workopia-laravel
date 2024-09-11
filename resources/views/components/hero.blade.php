@@ -6,7 +6,7 @@
         <h2 class="text-4xl md:text-5xl text-white font-bold mb-8">
             {{$title}}
         </h2>
-        <form class="block mx-5 md:mx-auto md:space-x-2">
+        <form class="block mx-5 space-y-2 md:mx-auto md:space-x-2">
             <input type="text" name="keywords" placeholder="Keywords"
                 class="w-full md:w-72 px-4 py-3 focus:outline-none" />
             <input type="text" name="location" placeholder="Location"
