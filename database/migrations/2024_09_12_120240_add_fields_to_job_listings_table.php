@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('tags')->nullable();
             $table->enum('job_type', ['Full-Time', 'Part-Time', 'Contract', 'Temporary', 'Internship', 'Volunteer', 'On-Call'])->default('Full-Time');
             $table->boolean('remote')->default(false);
-            $table->string('requirements')->nullable();
-            $table->string('benefits')->nullable();
+            $table->text('requirements')->nullable();
+            $table->text('benefits')->nullable();
             $table->string('address')->nullable();
             $table->string('city');
             $table->string('state');
@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('contact_email');
             $table->string('contact_phone')->nullable();
             $table->string('company_name');
-            $table->string('company_description')->nullable();
+            $table->text('company_description')->nullable();
             $table->string('company_logo')->nullable();
             $table->string('company_website')->nullable();
 
