@@ -20,7 +20,7 @@ class JobController extends Controller
 
     // @desc    Show create job form
     // @route   GET /jobs/create
-    public function create(): View
+    public function create()
     {
         return view('jobs.create');
     }
