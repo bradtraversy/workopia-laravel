@@ -5,11 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-use App\Models\Job;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\Models\Job;
 
 class JobController extends Controller
 {
+    use AuthorizesRequests;
+
     // @desc    Show all job listings
     // @route   GET /jobs
     public function index(): View
@@ -79,6 +82,9 @@ class JobController extends Controller
     // @route   GET /jobs/{$id}/edit
     public function edit(Job $job): View
     {
+        // Check if user is authorized
+        $this->authorize('update', $job);
+
         return view('jobs.edit')->with('job', $job);
     }
 
@@ -86,6 +92,9 @@ class JobController extends Controller
     // @route   PUT /jobs/{$id}
     public function update(Request $request, Job $job): string
     {
+        // Check if user is authorized
+        $this->authorize('update', $job);
+
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
@@ -129,6 +138,9 @@ class JobController extends Controller
     // @route   DELETE /jobs/{$id}
     public function destroy(Job $job): RedirectResponse
     {
+        // Check if user is authorized
+        $this->authorize('delete', $job);
+
         // If logo, then delete it
         if ($job->company_logo) {
             Storage::delete('public/logos/' . $job->company_logo);
