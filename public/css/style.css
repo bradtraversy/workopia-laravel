@@ -11,3 +11,14 @@
 .hero {
     background-image: url("../images/hero.jpg");
 }
+
+#map {
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+}
+
+#applicant-form {
+    position: relative;
+    z-index: 2;
+}
