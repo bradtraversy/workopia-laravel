@@ -71,6 +71,8 @@
           </p>
         </div>
         @endif
+
+        @auth
         <p class="my-5">
           Put "Job Application" as the subject of your email
           and attach your resume.
@@ -104,6 +106,11 @@
             </div>
           </div>
         </div>
+        @else
+        <p class="my-5 bg-gray-200 rounded-xl p-3">
+          <i class="fas fa-info-circle mr-3"></i> You must be logged in to apply for this job
+        </p>
+        @endauth
       </div>
 
       <div class="bg-white p-6 rounded-lg shadow-md mt-6">
